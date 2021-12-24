@@ -16,78 +16,87 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-image" src="assets/images/Background.png">
+    <div class="container-fluid bg-secondary">
+
+
         <header>
-            <div class="container bg-dark">
-                <div class="row bg-dark border border-white text-danger text-center">
-                    <h1>BJJ Word Guess !!!</h1>
+            <div class="container-fluid bg-dark border border-white rounded">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="display-1 text-danger text-center"> <strong>BJJ Word Guess !!!</strong> </h1>
+                    </div>
                 </div>
             </div>
         </header>
-        <section class="my-2">
-            <div class="container bg-dark border border-white">
-                <div class="row bg-dark border border-white text-danger">
-                    <h3>Rules:</h3>
+
+
+        <section>
+            <div class="container my-3 bg-dark border border-white rounded">
+                <div class="row border-bottom">
+                    <h1 class="text-danger text-center">Rules</h1>
                 </div>
-                <div class="row text-danger bg-secondary">
-                    <ul>
-                        <li>Guess the name of the BJJ move by clicking the appropriate letters! </li>
-                        <li>You have 10 guesses per word!</li>
-                        <li>You earn <strong>1 point</strong> for every word you guess correctly! </li>
-                        <li>Oh! And don't worry! We will display your guessed letters so you won't forget your progress!
-                        </li>
-                        <li>The game is ready to play! Make your first guess now by clicking any key on your keyboard!
-                        </li>
-                        <li>Good Luck and Have Fun !</li>
-                    </ul>
-                </div>
+                <ul class="list-unstyled text-center text-danger lead">
+                    <li>Guess the name of the BJJ move by clicking the appropriate letters!</li>
+                    <li>You have 100 hp per word. Every wrong guess is -10hp!</li>
+                    <li>You earn <strong>1 point</strong> for every word you guess correctly!</li>
+                    <li>We will display your guessed letters so you won't forget your progress!</li>
+                    <li>The game is ready to play! Make your first guess now by clicking any key on your keyboard!
+                    </li>
+                    <li>Good Luck and Have Fun !</li>
+                </ul>
             </div>
         </section>
-        <section class="my-2">
-            <div class="container border border-white bg-dark">
-                <div class="row bg-dark text-danger border border-white text-center">
-                    <h2>Hint</h2>
-                </div>
-                <div class="row align-center bg-secondary border border-white">
+
+
+        <section>
+            <div class="container  bg-dark my-3 border border-white rounded">
+                <div class="row">
+                    <h1 class="text-danger text-center border-bottom border-white">Hint</h1>
                     <!-- change image per word. if armbar is wordBeingGuessed then armbar img is displayed -->
-                    <img id="imageOfCurrentWord" src="assets/images/Armbar.jpg" class="rounded mx-auto d-block p-2"
-                        alt="Picture of BJJ Move">
+                    <img id="imageOfCurrentWord" src="assets/images/Triangle.jpg"
+                        class="rounded-circle m-auto d-block w-50" alt="Picture of BJJ Move">
                 </div>
             </div>
         </section>
-        <section class="my-2">
-            <div class="container border border-white bg-dark">
-                <div class="row text-center bg-dark border border-white text-danger">
-                    <h2>Current Word</h2>
+
+
+        <section>
+            <div class="container bg-dark my-3 border border-white rounded">
+                <div class="row border-bottom border-white">
+                    <h1 class="text-center text-danger">Current Word</h1>
                 </div>
-                <div class="row text-center text-danger border border-white bg-secondary">
+                <div class="row">
                     <!-- display currentWord as underscores. if keystroke is true, display that letter-->
-                    <p id="currentWord">_ _ _ _ _ _</p>
+                    <h1 id="currentWord" class="text-center text-danger">_ _ _ _ _ _</h1>
                 </div>
             </div>
         </section>
-        <section class="my-2">
-            <div class="container border border-white bg-dark">
-                <div class="row text-danger bg-dark border border-white text-center">
-                    <div class="col border border-white bg-dark text-center text-danger">
-                        <h3>Number of Guesses Remaining</h3>
-                    </div>
-                    <div class="col border border-white bg-dark text-center text-danger">
-                        <h3>Letters Already Guessed</h3>
-                    </div>
+
+
+        <section>
+            <div class="container bg-dark my-3 border border-white rounded">
+                <div class="row border-bottom">
+                    <h1 class="text-danger text-center">Health</h1>
                 </div>
-                <div class="row text-danger bg-dark border border-white">
-                    <div class="col border border-white bg-secondary text-center text-danger">
-                        <!-- decrement number for each false guess of currentWord, if 0 alert you lost, reset game with new word -->
-                        <p id="numberOfGuessesRemaining">10</p>
-                    </div>
-                    <div class="col border border-white bg-secondary text-center text-danger">
-                        <!-- letters will appear as keyed if false to currentWord -->
-                        <p id="lettersAlreadyGuessed">T,R,W,J,I,K,U,B</p>
-                    </div>
+                <div class="row">
+                    <h2 id="health" class="text-danger text-center">100%</h2>
                 </div>
             </div>
         </section>
+
+
+        <section>
+            <div class="container bg-dark border border-white rounded ">
+                <div class="row border-bottom">
+                    <h1 class="text-danger text-center">Letters Guessed</h1>
+                </div>
+                <div class="row">
+                    <h2 id="lettersAlreadyGuessed" class="text-center text-danger">T,R,W,J,I,K,U,B</h2>
+                </div>
+            </div>
+        </section>
+
+
     </div>
 </body>
 
